@@ -58,7 +58,9 @@
 }
 
 - (void)_customInit {
+#if !TARGET_OS_TV
     self.exclusiveTouch = YES;
+#endif
     _minimumValue = 0;
     _maximumValue = 5;
     _value = 0;
